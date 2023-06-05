@@ -1,0 +1,48 @@
+<head>
+<body>
+ <form id="numberForm">
+  <label for="field1">Field 1:</label>
+  <input type="text" id="field1" required><br>
+  
+  <label for="field2">Field 2:</label>
+  <input type="text" id="field2" required><br>
+  
+  <button type="submit">Submit</button>
+ </form>
+ <script>
+  document.getElementById("numberForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Get the values of the input fields
+  var field1 = document.getElementById("field1").value;
+  var field2 = document.getElementById("field2").value;
+
+  // Check if field 1 contains only numbers
+  if (!isNumeric(field1)) {
+    alert("Field 1 should only contain numbers.");
+    return;
+  }
+
+  // Check if field 2 contains only numbers
+  if (!isNumeric(field2)) {
+    alert("Field 2 should only contain numbers.");
+    return;
+  }
+
+  // Validation passed, proceed with form submission or other actions
+  // For example, you can display a success message or send the form data to a server
+  
+  // Uncomment the line below to submit the form
+  // document.getElementById("numberForm").submit();
+
+  // Uncomment the line below to redirect to another web page
+  // window.location.href = "another-web-page.html";
+});
+
+function isNumeric(value) {
+  return /^\d+$/.test(value);
+}
+</script>
+</body>
+</html>
+

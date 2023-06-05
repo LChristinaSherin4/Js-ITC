@@ -1,0 +1,29 @@
+<html>
+<body>
+  <form id="additionForm">
+  <label for="firstNumber">First Number:</label>
+  <input type="number" id="firstNumber" required><br>
+  
+  <label for="secondNumber">Second Number:</label>
+  <input type="number" id="secondNumber" required><br>
+  
+  <label for="result">Result:</label>
+  <input type="text" id="result" readonly><br>
+  
+  <button type="button" onclick="calculateAddition()">Calculate</button>
+  </form>
+  <script>
+  function calculateAddition() {
+  // Get the values of the input fields
+  var firstNumber = parseInt(document.getElementById("firstNumber").value);
+  var secondNumber = parseInt(document.getElementById("secondNumber").value);
+
+  // Perform the addition
+  var additionResult = firstNumber + secondNumber;
+
+  // Display the result in the text box
+  document.getElementById("result").value = additionResult;
+  }
+  </script>
+</body>
+</html>

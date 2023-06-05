@@ -1,0 +1,19 @@
+<html>
+<body>
+	<button onclick="openWin()">Open Window</button>
+    <button onclick="closeWin()">Close Window</button>
+    <script>
+    	var newWindow;
+
+        function openWin() {
+         newWindow = window.open("", "_blank");
+         newWindow.location.href = "https://example.com";
+        }
+
+        function closeWin() {
+         if (newWindow && !newWindow.closed) {
+            newWindow.close();
+        }
+       }
+</script>
+</body>

@@ -1,0 +1,27 @@
+<html>
+<body>
+  <form id="reverseForm">
+  <label for="number">Number:</label>
+  <input type="number" id="numberInput" required><br>
+  
+  <button type="button" onclick="reverseNumber()">Reverse</button>
+  </form>
+  <script>
+  function reverseNumber() {
+  // Get the value of the input field
+  var number = document.getElementById("numberInput").value;
+
+  // Reverse the number
+  var reversedNumber = parseFloat(number.toString().split('').reverse().join(''));
+
+  // Print the reversed number
+  console.log(reversedNumber);
+  // Alternatively, you can display it on the page using:
+  // document.getElementById("result").textContent = reversedNumber;
+}
+</script>
+
+</body>
+</html>
+
+
